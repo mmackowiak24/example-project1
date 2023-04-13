@@ -14,22 +14,17 @@ print("{} {}".format(hello,student))
 # print("Hello "+student)
 
 
-# zadanie 1.3
-
+# zadanie 1.3 - policz liczbe studentow w tablicy studenci 
 studenci = ["Ania", "Kuba", "Piotr", "Jan"]
 
-# policz liczbe studentow w tablicy studenci 
 # oczekiwany rezultat: Liczba studentow wynosi: 4
 liczba_studentow = len(studenci)
 print("Liczba studentow wynosi: ", liczba_studentow)
 
 
-# zadanie 1.4
-
+# zadanie 1.4 - za pomoca petli i print przywitaj sie z kazdym studentem z tabeli studenci osobno
 studenci = ["Ania", "Kasia", "Piotr", "Tomek"]
 
-# za pomoca petli i print przywitaj sie z kazdym studentem
-# z tabeli studenci osobno
 # oczekiwany rezultat:
 # Hello Ania
 # Hello Kasia
@@ -40,35 +35,28 @@ for x in range(liczba_studentow):
 
 
 # zadanie 1.5
-
 liczba = 3
 potega = 4
-
 wynik = pow(liczba,potega)
 
-# oczekiwany rezultat:
 # Wynik wynosi: 81
 print("Wynik wynosi: ",wynik)
 
 
 # zadanie 1.6
-
 # policz ilosc nawiasow ( w danym ciagu znakow
-
 ciag_znakow = "edbw(hdakqas(skqskahb))adwndwb(wgwidn()dsqwhjdw)"
 liczba_nawiasow_otwierajacych = ciag_znakow.count("(")
 
-# oczekiwany rezultat:
 # Liczba nawiasow otwierajacych wynosi: 4
 print("Liczba nawiasow otwierajacych wynosi: " + str(liczba_nawiasow_otwierajacych))
 
 
 # zadanie 1.7
-
 # posortuj alfabetycznie (od imienia) studentow
 studenci = ["Anna Szczesny", "Tomasz Nijaki", "Barbara Kowalska", "Jan Niezbedny"]
 studenci.sort()
-# oczekiwany rezultat:
+
 # Anna Szczesny
 # Barbara Kowalska
 # Jan Niezbedny
@@ -79,11 +67,9 @@ for student in studenci:
 
 
 # zadanie 1.8
-
 # posortuj alfabetycznie (od nazwiska) studentow
 studenci = ["Anna Szczesny", "Tomasz Nijaki", "Barbara Kowalska", "Jan Niezbedny"]
 studenci.sort(key=lambda name: name.split(" ")[-1].lower())
-
 # oczekiwany rezultat:
 # Barbara Kowalska
 # Jan Niezbedny
@@ -95,7 +81,6 @@ for student in studenci:
 
 
 # zadanie 1.9
-
 # policz wszystkich studentow z tablicy, ktorych nazwisko zaczyna sie na N
 studenci = ["Anna Szczesny", "Tomasz Nijaki", "Barbara Kowalska", "Jan Niezbedny"]
 studentN = 0
@@ -106,12 +91,11 @@ print("Liczba studentow na N wynosi: ",studentN)
 
 
 # zadanie 1.10
-
-# zmienne poniezej preprezentuja ulozenie punktow na wykresie,
-# do zadania dolaczono takze rysunek pomocniczy
+# zmienne poniezej preprezentuja ulozenie punktow na wykresie
 wykres_1 = [[2, 4], [4, 4], [6, 4]]
 wykres_2 = [[2, 3], [4, 4], [6, 5]]
 wykres_3 = [[2, 3], [4, 3], [5, 4]]
+
 def isLinear(coordinates):
     if len(coordinates) < 3:
         return True #z dwóch punktów można utworzyć funkcję liniową
