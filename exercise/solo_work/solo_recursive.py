@@ -18,7 +18,7 @@ def find_max(numbers):
         else:
             return maxNumber
 a = find_max(liczby)
-print("find max", a)
+print("find max:", a)
 
 #2 - sum_of_list
 # wez liste -> wez pierwszy element i wpisz go na sume -> sprawdz czy lista ma kolejne elementy:
@@ -36,3 +36,16 @@ def sum_of_list(numbers):
 
 b = sum_of_list(liczby)
 print("sum of list:", b)
+
+#3 - n!
+#jeśli liczba jest mniejsza bądź równa 1: return silnia
+liczba = 5
+def silnia(number):
+    if(number >= 1):
+        mySilnia = mySilnia + number
+        return (mySilnia * silnia(number - 1))
+    else:
+        return mySilnia
+
+c = silnia(liczba)
+print("silnia:", c)
