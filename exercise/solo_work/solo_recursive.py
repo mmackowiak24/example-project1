@@ -27,9 +27,9 @@ print("find max", a)
 liczby = [1,3,5,8]
 
 def sum_of_list(numbers):
+    sum_of_elements = 0 + numbers[0]
+    numbers.pop(0)
     if(len(numbers) > 0):
-        sum_of_elements = 0 + numbers[0]
-        numbers.pop(0)
         return (sum_of_elements + sum_of_list(numbers))
     else:
         return sum_of_elements
