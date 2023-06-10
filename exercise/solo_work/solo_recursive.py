@@ -51,3 +51,20 @@ def silnia(number):
 
 c = silnia(liczba)
 print("silnia:", c)
+
+
+#4 Ciag fibonacciego - użytkownik podaje liczbe, według której generowane są kolejne elementy ciągu fibonacciego (input 5 - 5 elementów ciągu)
+#fibonacci:
+#0 dla n = 0
+#1 dla n = 1
+#fibonacci(n-1) + fibonacci(n-2) dla n>1
+liczba = 10
+def fibonacci(number):
+    if(number == 0):
+        return 0
+    elif(number == 1):
+        return 1
+    else:
+        return (fibonacci(number - 1) + fibonacci(number - 2))
+
+print(fibonacci(liczba))
