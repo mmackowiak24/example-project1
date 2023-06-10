@@ -38,14 +38,16 @@ b = sum_of_list(liczby)
 print("sum of list:", b)
 
 #3 - n!
-#jeśli liczba jest mniejsza bądź równa 1: return silnia
+#jeśli liczba jest mniejsza bądź równa 1: return 1
+#w przeciwnym wypadku: return liczba * silnia(liczba-1)
 liczba = 5
 def silnia(number):
-    if(number >= 1):
-        mySilnia = mySilnia + number
-        return (mySilnia * silnia(number - 1))
-    else:
+    if(number <= 1):
+        mySilnia = number
         return mySilnia
+    else:
+        mySilnia = number
+        return (mySilnia * silnia(number - 1))
 
 c = silnia(liczba)
 print("silnia:", c)
