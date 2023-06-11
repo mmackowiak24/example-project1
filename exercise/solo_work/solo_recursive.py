@@ -5,6 +5,7 @@
 # sprawdź czy jest kolejny element na liście
 # tak - wywołaj funkcje i powtórz powyższe kroki
 # nie - koniec programu
+import numpy as numpy
 
 liczby = [1,3,5,8]
 
@@ -68,3 +69,48 @@ def fibonacci(number):
         return (fibonacci(number - 1) + fibonacci(number - 2))
 
 print(fibonacci(liczba))
+
+
+#5 Sudoku - program iteruje po kolumnach i sprawdza czy są puste.
+# puste: sprawdź od numeru 1-4 który pasuje i go wprowadź
+# rozwiąż sudoku dla wprowadzonej liczby
+# jeśli się nie da: zmień na 0 i sprawdź inne cyfry
+
+sudoku = [[1,0,0,0],
+          [0,0,0,4],
+          [0,0,2,0],
+          [0,3,0,0]]
+#sprawdź czy można wstawić liczbę
+def isPossible(matrix, row, column, n):
+    #wiersze
+    for i in range(0, 4):
+        if matrix[row][column] == n:
+            return False
+    #kolumny
+    for i in range(0, 4):
+        if matrix[i][column] == n:
+            return False
+
+    #macierz 2x2
+    row0 = (row // 2) * 2
+    col0 = (column // 2) * 2
+    for i in range(2):
+        for j in range(2):
+            if matrix[row0 + i][col0 + j] == n:
+                return False
+    return True
+
+def solve_sudoku(matrix):
+    for i in range(4):
+        for j in range(4):
+            if matrix[i][j] == 0:
+                for n in range(1, 5):
+                    if isPossible(matrix, i, j, n):
+                        matrix[i][j] = n
+                        solve_sudoku(matrix)
+                        matrix[i][j] = 0
+                return None
+    print(numpy.matrix(matrix))
+
+solve_sudoku(sudoku)
+
