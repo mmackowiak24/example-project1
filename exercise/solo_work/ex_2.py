@@ -30,3 +30,10 @@ obwod = 2 * math.pi * r
 pole = math.pi * pow(r,2)
 print("Obwod koła wynosi "+ str(obwod) + ", zas pole wynosi " + str(pole) + ".")
 
+#trapez
+obwod = a + b + c + d
+pole = ((a + b) * h) / 2
+print("Obwod trapeza wynosi "+ str(obwod) + ", zas pole wynosi " + str(pole) + ".")
+
+
+
