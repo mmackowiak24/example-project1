@@ -15,4 +15,10 @@ print("Obwod trojkata wynosi " + str(obwod) + ", zas pole wynisi " + str(pole) +
 
 obwod = a + b + a + b
 pole = a * b
-print ("Obwod prostokata wynosi "+ str(obwod) + ", zas pole wynosi " + str(pole) + ".")
+print("Obwod prostokata wynosi "+ str(obwod) + ", zas pole wynosi " + str(pole) + ".")
+
+
+#kwadrat
+obwod = 4*a
+pole = a*a
+print("Obwod kwadratu wynosi "+ str(obwod) + ", zas pole wynosi " + str(pole) + ".")
